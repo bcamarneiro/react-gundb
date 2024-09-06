@@ -1,0 +1,41 @@
+{
+  "name": "react-gundb",
+  "author": {
+    "name": "Bruno Camarneiro",
+    "email": "bruno@camarneiro.com"
+  },
+  "private": false,
+  "version": "1.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "check": "biome check --write",
+    "dev": "rslib dev --open",
+    "format": "biome format --write"
+  },
+  "dependencies": {
+    "react-dom": "^18.3.1"
+  },
+  "peerDependencies": {
+    "gun": "^0.2020.1240",
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@rsbuild/core": "1.0.1-rc.5",
+    "@rsbuild/plugin-react": "1.0.1-rc.5",
+    "@rslib/core": "^0.0.5",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.2"
+  },
+  "volta": {
+    "node": "22.8.0"
+  }
+}
