@@ -4,17 +4,18 @@ import { createContext, useMemo, type PropsWithChildren } from 'react';
 const GunContext = createContext<IGunInstance | null>(null);
 
 interface GunProviderProps extends PropsWithChildren {
+  gun?: IGunInstance;
   options?: GunOptions;
 }
 
-export const GunProvider = ({ children, options }: GunProviderProps) => {
-  const gun = useMemo(() => Gun(options), [options]);
+export const GunProvider = ({ children, options, gun }: GunProviderProps) => {
+  const gunInstance = useMemo(() => gun ? gun : Gun(options), [options, gun]);
 
-  if (!gun) {
+  if (!gunInstance) {
     return null;
   }
 
-  return <GunContext.Provider value={gun}>{children}</GunContext.Provider>;
+  return <GunContext.Provider value={gunInstance}>{children}</GunContext.Provider>;
 };
 
 export default GunContext;
