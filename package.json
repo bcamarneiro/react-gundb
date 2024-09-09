@@ -1,11 +1,12 @@
 {
   "name": "react-gundb",
+  "description": "react-gundb is a React library that provides integration with GunDB, offering a seamless way to use the decentralized database in React applications. It simplifies the process of working with GunDB's real-time, distributed nature within the React ecosystem, allowing developers to build scalable and offline-first applications with ease.",
   "author": {
     "name": "Bruno Camarneiro",
     "email": "bruno@camarneiro.com"
   },
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.3",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
