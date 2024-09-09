@@ -20,4 +20,11 @@ export default defineConfig({
     }
   ],
   plugins: [pluginReact()],
+  tools: {
+    rspack: {
+      module: {
+        noParse: /node_modules\/gun/
+      }
+    }
+  }
 });
