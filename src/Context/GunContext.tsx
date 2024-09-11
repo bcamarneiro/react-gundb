@@ -1,5 +1,6 @@
 import Gun, { type IGunInstance, type GunOptions } from 'gun';
 import { createContext, useMemo, type PropsWithChildren } from 'react';
+import 'gun/sea';
 
 const GunContext = createContext<IGunInstance | null>(null);
 
