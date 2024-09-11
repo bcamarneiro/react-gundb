@@ -5,8 +5,11 @@
     "name": "Bruno Camarneiro",
     "email": "bruno@camarneiro.com"
   },
+  "publishConfig": {
+    "registry": "http://0.0.0.0:4873"
+  },
   "private": false,
-  "version": "1.0.9",
+  "version": "1.0.10",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -16,28 +19,33 @@
   ],
   "scripts": {
     "build": "rslib build",
+    "watch": "rslib build --watch",
     "check": "biome check --write",
     "dev": "rslib dev --open",
     "format": "biome format --write"
   },
-  "dependencies": {
-    "react-dom": "^18.3.1"
-  },
   "peerDependencies": {
-    "gun": "^0.2020.1240",
-    "react": "^18.0.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.8.3",
-    "@rsbuild/core": "1.0.1-rc.5",
-    "@rsbuild/plugin-react": "1.0.1-rc.5",
-    "@rslib/core": "^0.0.5",
-    "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0",
+    "@biomejs/biome": "^1.9.4",
+    "@rsbuild/core": "1.1.10",
+    "@rsbuild/plugin-react": "1.1.0",
+    "@rslib/core": "^0.1.4",
+    "@swc/helpers": "^0.5.15",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
     "ignore-loader": "^0.1.2",
-    "typescript": "^5.5.2"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.2"
   },
   "volta": {
     "node": "22.8.0"
+  },
+  "packageManager": "pnpm@7.32.4+sha512.82570163e98c1ff15e93e7c220416dd87eae3eac048fe406e0fd598c755cd5a4589dfd63cd42c1dfacd805cb817d0753d7c7f1739d41a159a6f3220a35c08627",
+  "dependencies": {
+    "gun": "^0.2023.520"
   }
 }

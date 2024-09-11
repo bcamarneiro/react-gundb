@@ -1,5 +1,5 @@
-import { pluginReact } from '@rsbuild/plugin-react';
-import { defineConfig } from '@rslib/core';
+import { pluginReact } from "@rsbuild/plugin-react";
+import { defineConfig } from "@rslib/core";
 
 const shared = {
   dts: {
@@ -11,13 +11,15 @@ export default defineConfig({
   lib: [
     {
       ...shared,
-      format: 'esm',
+      autoExternal: true,
+      externalHelpers: true,
+      format: "esm",
       output: {
         distPath: {
-          root: './dist',
+          root: "./dist",
         },
       },
-    }
+    },
   ],
   plugins: [pluginReact()],
 });
