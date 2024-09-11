@@ -23,7 +23,7 @@ export default defineConfig({
   tools: {
     rspack: {
       module: {
-        noParse: /node_modules\/gun/
+        noParse: [/node_modules\/gun/, /gun\.js$/]
       }
     }
   }
